@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notes",
+  "info": {
+    "name": "note"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "note_text": {
+      "type": "richtext"
+    },
+    "highlight": {
+      "via": "notes",
+      "model": "highlight"
+    }
+  }
+}

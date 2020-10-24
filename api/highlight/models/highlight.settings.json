@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "highlights",
+  "info": {
+    "name": "highlight",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "isNoteOnly": {
+      "type": "boolean"
+    },
+    "location": {
+      "type": "json"
+    },
+    "note": {
+      "type": "richtext"
+    },
+    "notes": {
+      "collection": "note",
+      "via": "highlight"
+    },
+    "book": {
+      "model": "book",
+      "via": "highlights"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}
